@@ -13,6 +13,15 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
+            HStack{
+                Spacer()
+                Button {
+                    LoginManager.shared.isLogin = false
+                } label: {
+                    Text("Logout")
+                        .padding(.all)
+                }
+            }
             ScrollView(showsIndicators: false) {
                 LazyVStack(
                     alignment: .leading,

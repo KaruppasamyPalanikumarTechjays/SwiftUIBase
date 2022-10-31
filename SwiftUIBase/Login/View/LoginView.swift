@@ -6,15 +6,38 @@
 //
 
 import SwiftUI
+import TechjaysAPIHelper
 
 struct LoginView: View {
+    @StateObject var viewModel = LoginViewModel()
+    var data = VidRivalUser()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text(self.viewModel.result.firstname ?? "")
+                NavigationLink(destination: HomeView()) {
+                    Text("Login")
+                } .onTapGesture {
+                    activateLogin()
+                }
+            }.onAppear(){
+                self.viewModel.viewUserProfile()
+            }
+        }
+    }
+    func activateLogin() {
+        LoginManager.shared.isLogin = true
     }
 }
-
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }
 }
+
+
+
+
+
+
+

@@ -52,8 +52,7 @@ class PaginatedViewHandler<T:Identifiable & Codable> {
                     .limit : "\(self.limit)"],
             parameters: ["search_type":"all"])
         APIClient().GET(
-            url: resultUrl,
-            headers: ["Authorization":"Token 96fb85ed49769a7b866024c799b4ef2771933268"]) { (status, response:APIResponse<[T]>) in
+            url: resultUrl) { (status, response:APIResponse<[T]>) in
                 switch status {
                     case .SUCCESS:
                         if let next = response.nextLink,

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F45C7D9290FC81100CC504A /* PaginatedViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45C7D8290FC81100CC504A /* PaginatedViewHandler.swift */; };
+		1F45C7DB290FEE3900CC504A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45C7DA290FEE3900CC504A /* LoginViewModel.swift */; };
 		1F4BEAA0290FA3A700D2C7CA /* SwiftUIBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4BEA9F290FA3A700D2C7CA /* SwiftUIBaseApp.swift */; };
 		1F4BEAA4290FA3A900D2C7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4BEAA3290FA3A900D2C7CA /* Assets.xcassets */; };
 		1F4BEAA7290FA3A900D2C7CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4BEAA6290FA3A900D2C7CA /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		1F45C7D8290FC81100CC504A /* PaginatedViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedViewHandler.swift; sourceTree = "<group>"; };
+		1F45C7DA290FEE3900CC504A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1F4BEA9C290FA3A700D2C7CA /* SwiftUIBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4BEA9F290FA3A700D2C7CA /* SwiftUIBaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBaseApp.swift; sourceTree = "<group>"; };
 		1F4BEAA3290FA3A900D2C7CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		1F4BEAB4290FA5AE00D2C7CA /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				1F45C7DA290FEE3900CC504A /* LoginViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				1F4BEAC9290FADBE00D2C7CA /* HomeCellView.swift in Sources */,
 				1F4BEABE290FA6EA00D2C7CA /* UserDefaultKeys.swift in Sources */,
+				1F45C7DB290FEE3900CC504A /* LoginViewModel.swift in Sources */,
 				1F4BEAAE290FA51300D2C7CA /* LoginView.swift in Sources */,
 				1F4BEAC5290FACA500D2C7CA /* User.swift in Sources */,
 				1F4BEAC7290FAD6600D2C7CA /* HomeViewModel.swift in Sources */,

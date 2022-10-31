@@ -13,7 +13,7 @@ class HomeViewModel: ObservableObject {
     
     @Published var result: [VidRivalUser] = []
 
-    var resultValue:PaginatedViewHandler<VidRivalUser> = PaginatedViewHandler(with: "https://dev-myvidrivals.myvidhire.com/api/v1/friends-app/friends-list/")
+    var resultValue:PaginatedViewHandler<VidRivalUser> = PaginatedViewHandler(with: "friends-app/friends-list/")
     
     init() {
         resultValue.fetchData(from: true) {

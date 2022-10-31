@@ -10,16 +10,18 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
-    
+
     var body: some View {
         VStack {
             HStack{
                 Spacer()
-                Button {
-                    LoginManager.shared.isLogin = false
-                } label: {
-                    Text("Logout")
-                        .padding(.all)
+                NavigationLink(destination: LoginView()) {
+                    Button {
+                        LoginManager.shared.isLogin = false
+                    } label: {
+                        Text("Logout")
+                            .padding(.all)
+                    }
                 }
             }
             ScrollView(showsIndicators: false) {

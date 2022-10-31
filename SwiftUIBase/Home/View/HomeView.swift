@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var viewModel = HomeViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ScrollView(showsIndicators: false) {
+                LazyVStack(
+                    alignment: .leading,
+                    spacing: 0,
+                    pinnedViews: .sectionHeaders) {
+                        ForEach(viewModel.result,
+                                id: \.userId) { detail in
+                            HomeCellView(userDetail: detail)
+                                .onAppear {
+                                    viewModel.getMoreData(currentData: detail)
+                                }
+                        }
+                    }
+            }
+        }
     }
 }
 

@@ -11,7 +11,11 @@ import SwiftUI
 struct SwiftUIBaseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if LoginManager.shared.isLogin {
+                HomeView()
+            } else {
+                LoginView()
+            }
         }
     }
 }

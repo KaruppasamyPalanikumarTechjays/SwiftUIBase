@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		1F4BEAA0290FA3A700D2C7CA /* SwiftUIBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4BEA9F290FA3A700D2C7CA /* SwiftUIBaseApp.swift */; };
-		1F4BEAA2290FA3A700D2C7CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4BEAA1290FA3A700D2C7CA /* ContentView.swift */; };
 		1F4BEAA4290FA3A900D2C7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4BEAA3290FA3A900D2C7CA /* Assets.xcassets */; };
 		1F4BEAA7290FA3A900D2C7CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4BEAA6290FA3A900D2C7CA /* Preview Assets.xcassets */; };
+		1F4BEAAE290FA51300D2C7CA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4BEAAD290FA51300D2C7CA /* LoginView.swift */; };
+		1F4BEAB0290FA52200D2C7CA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4BEAAF290FA52200D2C7CA /* HomeView.swift */; };
+		1F4BEABB290FA63D00D2C7CA /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4BEABA290FA63D00D2C7CA /* LoginManager.swift */; };
+		1F4BEABE290FA6EA00D2C7CA /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4BEABD290FA6EA00D2C7CA /* UserDefaultKeys.swift */; };
+		1F4BEAC0290FA75500D2C7CA /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4BEABF290FA75500D2C7CA /* LocalStorage.swift */; };
+		1F4BEAC3290FA9D300D2C7CA /* TechjaysAPIHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 1F4BEAC2290FA9D300D2C7CA /* TechjaysAPIHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F4BEA9C290FA3A700D2C7CA /* SwiftUIBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4BEA9F290FA3A700D2C7CA /* SwiftUIBaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBaseApp.swift; sourceTree = "<group>"; };
-		1F4BEAA1290FA3A700D2C7CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1F4BEAA3290FA3A900D2C7CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F4BEAA6290FA3A900D2C7CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1F4BEAAD290FA51300D2C7CA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1F4BEAAF290FA52200D2C7CA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1F4BEABA290FA63D00D2C7CA /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		1F4BEABD290FA6EA00D2C7CA /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		1F4BEABF290FA75500D2C7CA /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4BEAC3290FA9D300D2C7CA /* TechjaysAPIHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +62,12 @@
 			isa = PBXGroup;
 			children = (
 				1F4BEA9F290FA3A700D2C7CA /* SwiftUIBaseApp.swift */,
-				1F4BEAA1290FA3A700D2C7CA /* ContentView.swift */,
 				1F4BEAA3290FA3A900D2C7CA /* Assets.xcassets */,
 				1F4BEAA5290FA3A900D2C7CA /* Preview Content */,
+				1F4BEABC290FA6D000D2C7CA /* Helpers */,
+				1F4BEAB9290FA61C00D2C7CA /* Managers */,
+				1F4BEAB1290FA58A00D2C7CA /* Login */,
+				1F4BEAB2290FA59400D2C7CA /* Home */,
 			);
 			path = SwiftUIBase;
 			sourceTree = "<group>";
@@ -65,6 +78,87 @@
 				1F4BEAA6290FA3A900D2C7CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1F4BEAB1290FA58A00D2C7CA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1F4BEAB5290FA5B600D2C7CA /* Model */,
+				1F4BEAB4290FA5AE00D2C7CA /* View Model */,
+				1F4BEAB3290FA5A300D2C7CA /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1F4BEAB2290FA59400D2C7CA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1F4BEAB6290FA5C000D2C7CA /* Model */,
+				1F4BEAB7290FA5C700D2C7CA /* View Model */,
+				1F4BEAB8290FA5D000D2C7CA /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1F4BEAB3290FA5A300D2C7CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F4BEAAD290FA51300D2C7CA /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F4BEAB4290FA5AE00D2C7CA /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1F4BEAB5290FA5B600D2C7CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F4BEAB6290FA5C000D2C7CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F4BEAB7290FA5C700D2C7CA /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1F4BEAB8290FA5D000D2C7CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F4BEAAF290FA52200D2C7CA /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F4BEAB9290FA61C00D2C7CA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1F4BEABA290FA63D00D2C7CA /* LoginManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1F4BEABC290FA6D000D2C7CA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1F4BEABD290FA6EA00D2C7CA /* UserDefaultKeys.swift */,
+				1F4BEABF290FA75500D2C7CA /* LocalStorage.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +177,9 @@
 			dependencies = (
 			);
 			name = SwiftUIBase;
+			packageProductDependencies = (
+				1F4BEAC2290FA9D300D2C7CA /* TechjaysAPIHelper */,
+			);
 			productName = SwiftUIBase;
 			productReference = 1F4BEA9C290FA3A700D2C7CA /* SwiftUIBase.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +208,9 @@
 				Base,
 			);
 			mainGroup = 1F4BEA93290FA3A700D2C7CA;
+			packageReferences = (
+				1F4BEAC1290FA9D300D2C7CA /* XCRemoteSwiftPackageReference "APIHelper" */,
+			);
 			productRefGroup = 1F4BEA9D290FA3A700D2C7CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F4BEAA2290FA3A700D2C7CA /* ContentView.swift in Sources */,
+				1F4BEABE290FA6EA00D2C7CA /* UserDefaultKeys.swift in Sources */,
+				1F4BEAAE290FA51300D2C7CA /* LoginView.swift in Sources */,
+				1F4BEABB290FA63D00D2C7CA /* LoginManager.swift in Sources */,
+				1F4BEAC0290FA75500D2C7CA /* LocalStorage.swift in Sources */,
+				1F4BEAB0290FA52200D2C7CA /* HomeView.swift in Sources */,
 				1F4BEAA0290FA3A700D2C7CA /* SwiftUIBaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +441,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F4BEAC1290FA9D300D2C7CA /* XCRemoteSwiftPackageReference "APIHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TechjaysSwiftPackages/APIHelper.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F4BEAC2290FA9D300D2C7CA /* TechjaysAPIHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F4BEAC1290FA9D300D2C7CA /* XCRemoteSwiftPackageReference "APIHelper" */;
+			productName = TechjaysAPIHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F4BEA94290FA3A700D2C7CA /* Project object */;
 }

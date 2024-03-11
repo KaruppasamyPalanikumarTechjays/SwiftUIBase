@@ -21,15 +21,15 @@ jobs:
         run: |
           gem install bundler
           bundle install
-        working-directory: test/
+        working-directory: /bin/bash/test/
 
       - name: Build and Archive
         run: |
           bundle exec fastlane build
-        working-directory: test/
+        working-directory: /bin/bash/test/
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v2
         with:
           name: ipa
-          path: test/build/*.ipa
+          path: /bin/bash/test/build/*.ipa
